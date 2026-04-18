@@ -6,7 +6,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
-BASE_MODEL = "unsloth/Llama-3.2-1B"
+BASE_MODEL = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 ADAPTER_PATH = "data/artha-model"
 
 print("Loading Artha model...")

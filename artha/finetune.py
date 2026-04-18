@@ -16,7 +16,7 @@ from peft import (
     prepare_model_for_kbit_training,
 )
 
-MODEL_NAME = "unsloth/Llama-3.2-1B"
+MODEL_NAME = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 OUTPUT_DIR = "data/artha-model"
 
 def load_corpus(path: str = "data/corpus.jsonl"):
@@ -101,9 +101,9 @@ def train(
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         torch_dtype=torch.float32,
-        device_map="auto",
+        device_map="cpu",
     )
-    model.resize_token_embeddings(len(tokenizer))
+    model.resize_token_embeddings(len(tokenizer), mean_resizing=False)
     print("Model loaded.")
     print()
 
@@ -133,7 +133,7 @@ def train(
         fp16=False,
         bf16=False,
         logging_steps=50,
-        evaluation_strategy="steps",
+        eval_strategy="steps",
         eval_steps=100,
         save_strategy="steps",
         save_steps=100,

@@ -1,1 +1,25 @@
+# Build artifacts
+*.iso
+*.sqfs
+rootfs/
+iso/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Data (generated)
 data/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Env
+.env
+
+# Logs
+*.log
