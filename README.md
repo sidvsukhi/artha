@@ -1,5 +1,6 @@
 # ⟁ Artha
 [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-siddsukh/artha--1.1b-yellow)](https://huggingface.co/siddsukh/artha-1.1b)
+[![Demo](https://img.shields.io/badge/Live%20Demo-artha--demo-brightgreen)](https://huggingface.co/spaces/siddsukh/artha-demo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/sidvsukhi/artha?style=social)](https://github.com/sidvsukhi/artha)
 
